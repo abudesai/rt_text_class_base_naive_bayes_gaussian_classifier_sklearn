@@ -1,0 +1,12 @@
+[
+  {
+    "name": "var_smoothing",
+    "short_desc": "Portion of the largest variance of all features that is added to variances for calculation stability.",
+    "default": 1e-9,
+    "type": "real",
+    "search_type": "uniform",
+    "range_low": 1e-10,
+    "range_high": 1.0,
+    "run_HPO": true
+  }
+]
