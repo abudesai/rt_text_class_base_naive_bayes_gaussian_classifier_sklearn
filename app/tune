@@ -21,7 +21,7 @@ hpt_results_path = os.path.join(output_path, 'hpt_outputs')
 failure_path = os.path.join(output_path, 'errors', 'tune_failure')
 
 channel_name='training'
-training_path = os.path.join(data_path, channel_name)
+training_path = os.path.join(data_path, channel_name, "textClassificationBaseMainInput")
 
 
 
@@ -29,7 +29,7 @@ def tune(num_trials=10):
     try:        
         print('Starting the hyperparameter tuning.')  
         # Read data
-        train_data = utils.get_data(training_path, data_type="training")   
+        train_data = utils.get_data(training_path)   
         # read data config
         data_schema = utils.get_data_schema(data_schema_path)
         # run hyper-parameter tuning. This saves results in each trial, so nothing is returned

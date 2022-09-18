@@ -10,12 +10,12 @@ from sklearn.naive_bayes import GaussianNB
 
 
 model_fname = "model.save"
-MODEL_NAME = "text_class_naive_bayes_gaussian_sklearn"
+MODEL_NAME = "text_class_base_naive_bayes_sklearn"
 
 
 class Classifier(): 
     
-    def __init__(self, var_smoothing = 1e-9, **kwargs) -> None:
+    def __init__(self, var_smoothing = 1e-1, **kwargs) -> None:
         self.var_smoothing = float(var_smoothing)
         self.model = self.build_model()     
         
